@@ -1,4 +1,4 @@
-Download the android ndk (<23) and
+Download the android ndk (>23) and
 
     bash compile.sh
     
