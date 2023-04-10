@@ -14,3 +14,4 @@
 .cxx
 local.properties
 passworstlib/target
+passworstlib/Cargo/lock
