@@ -1,0 +1,12 @@
+/home/fr000gs/passworstlib/target/aarch64-linux-android/debug/deps/base16ct-e8dd7cc88edabcf2.rmeta: /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lib.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lower.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/mixed.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/upper.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/display.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/error.rs
+
+/home/fr000gs/passworstlib/target/aarch64-linux-android/debug/deps/libbase16ct-e8dd7cc88edabcf2.rlib: /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lib.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lower.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/mixed.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/upper.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/display.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/error.rs
+
+/home/fr000gs/passworstlib/target/aarch64-linux-android/debug/deps/base16ct-e8dd7cc88edabcf2.d: /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lib.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lower.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/mixed.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/upper.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/display.rs /home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/error.rs
+
+/home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lib.rs:
+/home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/lower.rs:
+/home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/mixed.rs:
+/home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/upper.rs:
+/home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/display.rs:
+/home/fr000gs/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.2.0/src/error.rs:

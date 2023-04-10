@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/fr000gs/passworstlib/target/aarch64-linux-android/debug/build/typenum-7609f372797f045b/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/fr000gs/passworstlib/target/aarch64-linux-android/debug/build/typenum-7609f372797f045b/out/op.rs
