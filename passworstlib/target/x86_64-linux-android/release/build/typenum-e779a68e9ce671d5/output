@@ -1,3 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/fr000gs/passworstlib/target/x86_64-linux-android/release/build/typenum-e779a68e9ce671d5/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/home/fr000gs/passworstlib/target/x86_64-linux-android/release/build/typenum-e779a68e9ce671d5/out/op.rs
