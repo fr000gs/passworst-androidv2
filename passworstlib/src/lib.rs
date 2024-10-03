@@ -38,7 +38,7 @@ fn truncate(hash: String) -> String {
 }
 
 fn process(user: String, pswd: String) -> String {
-    truncate(hash512(user+&pswd))+"@A"
+    truncate(hash512(pswd+&user))+"@A"
 }
 
 #[no_mangle]

@@ -17,9 +17,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private static native String hello(String pswd, String user);
+    private static native String hello(String user, String pswd);
     static {
-        System.loadLibrary("passworstlib");
+        System.loadLibrary("libpassworstlib");
     }
 
     public static String output = "";
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         EditText usertext = findViewById(R.id.editUser);
         EditText pswdtext = findViewById(R.id.editPswd);
         TextView tex1 = findViewById(R.id.textPswd);
-        MainActivity.output = MainActivity.hello(String.valueOf(pswdtext.getText()), String.valueOf(usertext.getText()));
+        MainActivity.output = MainActivity.hello(String.valueOf(usertext.getText()), String.valueOf(pswdtext.getText()));
         tex1.setText(output);
     }
 
