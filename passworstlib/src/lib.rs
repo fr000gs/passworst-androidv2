@@ -1,5 +1,6 @@
 use sha2::{Sha512, Digest};
-use base16ct;
+//use base16ct;
+use base64::{engine::general_purpose, Engine as _};
 // This is the interface to the JVM that we'll call the majority of our
 // methods on.
 use jni::JNIEnv;
@@ -24,9 +25,11 @@ fn hash512(string: String) -> String {
     let mut sha512 = Sha512::new();
     sha512.update(string);
     let hash = sha512.finalize();
-    base16ct::lower::encode_string(&hash)
+    //base16ct::lower::encode_string(&hash)
+    general_purpose::URL_SAFE_NO_PAD.encode(&hash)
 }
 
+/*
 fn truncate(hash: String) -> String {
     let mut value = String::new();
     let mut j = 0;
@@ -36,21 +39,24 @@ fn truncate(hash: String) -> String {
     }
     value
 }
+*/
 
 fn process(user: String, pswd: String) -> String {
-    truncate(hash512(pswd+&user))+"@A"
+    //truncate(hash512(pswd+&user))+"@A"
+    hash512(pswd+&user)+"@A"
+    //pswd+&user+"@A"
 }
 
 #[no_mangle]
 pub extern "system" fn Java_io_github_fr000gs_passworst_MainActivity_hello<'local>
 (mut env: JNIEnv<'local>, _class: JClass<'local>, 
- pswd_str: JString<'local>, user_str: JString<'local>,
+ user_str: JString<'local>, pswd_str: JString<'local>,
  )-> jstring {
     // First, we have to get the string out of Java. Check out the `strings`
     // module for more info on how this works.
-    let pswd: String = env.get_string(&pswd_str)
-        .expect("Couldn't get java string!").into();
     let user: String = env.get_string(&user_str)
+        .expect("Couldn't get java string!").into();
+    let pswd: String = env.get_string(&pswd_str)
         .expect("Couldn't get java string!").into();
 
 

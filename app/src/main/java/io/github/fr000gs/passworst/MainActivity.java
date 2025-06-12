@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private static native String hello(String user, String pswd);
     static {
-        System.loadLibrary("libpassworstlib");
+        System.loadLibrary("passworstlib");
     }
 
     public static String output = "";
