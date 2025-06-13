@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #rustup target add aarch64-linux-android armv7-linux-androideabi x86_64-linux-android i686-linux-android
 #cargo install cargo-ndk
 

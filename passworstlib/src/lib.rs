@@ -13,7 +13,7 @@ use jni::objects::{JClass, JString};
 // This is just a pointer. We'll be returning it from our function. We
 // can't return one of the objects with lifetime information because the
 // lifetime checker won't let us.
-use jni::sys::jstring;
+use jni::sys::{jstring, jint};
 
 // This keeps Rust from "mangling" the name and making it unique for this
 // crate.
@@ -41,16 +41,21 @@ fn truncate(hash: String) -> String {
 }
 */
 
-fn process(user: String, pswd: String) -> String {
+fn process(user: String, pswd: String, len: i32) -> String {
     //truncate(hash512(pswd+&user))+"@A"
-    hash512(pswd+&user)+"@A"
+    let mut x = hash512(pswd+&user);
+    x.truncate(len.try_into().unwrap());
+    x
     //pswd+&user+"@A"
 }
 
 #[no_mangle]
 pub extern "system" fn Java_io_github_fr000gs_passworst_MainActivity_hello<'local>
-(mut env: JNIEnv<'local>, _class: JClass<'local>, 
- user_str: JString<'local>, pswd_str: JString<'local>,
+(mut env: JNIEnv<'local>,
+_class: JClass<'local>,
+ user_str: JString<'local>,
+  pswd_str: JString<'local>,
+  len_int: jint
  )-> jstring {
     // First, we have to get the string out of Java. Check out the `strings`
     // module for more info on how this works.
@@ -58,11 +63,12 @@ pub extern "system" fn Java_io_github_fr000gs_passworst_MainActivity_hello<'loca
         .expect("Couldn't get java string!").into();
     let pswd: String = env.get_string(&pswd_str)
         .expect("Couldn't get java string!").into();
-
+    //let len: String = env.get_string(&len_int)
+    //        .expect("Couldn't get java string!").into();
 
     // Then we have to create a new Java string to return. Again, more info
     // in the `strings` module.
-    let output = env.new_string(process(user, pswd))
+    let output = env.new_string(process(user, pswd, len_int))
         .expect("Couldn't create java string!");
 
     // Finally, extract the raw pointer to return.
