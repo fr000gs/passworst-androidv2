@@ -14,7 +14,7 @@
 
 cargo ndk -t armeabi-v7a -t arm64-v8a -t x86 -t x86_64 -o ./jniLibs build --release
 
-cp target/aarch64-linux-android/release/libpassworstlib.so ../app/src/main/jniLibs/arm64-v8a
-cp target/armv7-linux-androideabi/release/libpassworstlib.so ../app/src/main/jniLibs/armeabi-v7a
-cp target/x86_64-linux-android/release/libpassworstlib.so ../app/src/main/jniLibs/x86_64
-cp target/i686-linux-android/release/libpassworstlib.so ../app/src/main/jniLibs/x86
+#cp target/aarch64-linux-android/release/libpassworstlib.so ../app/src/main/jniLibs/arm64-v8a
+#cp target/armv7-linux-androideabi/release/libpassworstlib.so ../app/src/main/jniLibs/armeabi-v7a
+#cp target/x86_64-linux-android/release/libpassworstlib.so ../app/src/main/jniLibs/x86_64
+#cp target/i686-linux-android/release/libpassworstlib.so ../app/src/main/jniLibs/x86
