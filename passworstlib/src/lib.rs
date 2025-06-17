@@ -30,8 +30,8 @@ fn hash512(string: String, base64enable: u8) -> String {
     let hash = sha512.finalize();
     if base64enable == 1 {
         let x = general_purpose::URL_SAFE_NO_PAD.encode(&hash);
-        log_info("ERROR", &x.as_str());
-        log_info("ERROR", x.len().to_string().as_str());
+        //log_info("ERROR", &x.as_str());
+        //log_info("ERROR", x.len().to_string().as_str());
         x
     }
     else {

@@ -7,10 +7,13 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.text.Editable;
 import android.text.InputType;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CheckBox;
 //import android.widget.SeekBar;
+//import android.widget.Switch;
 //import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.EditText;
@@ -41,16 +44,36 @@ public class MainActivity extends AppCompatActivity {
 
         Slider slider = findViewById(R.id.slider);
         slider.addOnChangeListener(
-                (
-                        slider1, value, fromUser
-                ) -> {
+                (slider1, value, fromUser) -> {
                     TextView c = findViewById(R.id.sliderValue);
                     c.setText(String.format("Length: %s", (int) value));
                     getHash();
                 }
         );
-        //findViewById(R.id.editUser)
 
+        EditText a = findViewById(R.id.editUser);
+        a.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override
+            public void afterTextChanged(Editable s) {
+                getHash();
+            }}
+        );
+
+        EditText b = findViewById(R.id.editPswd);
+        b.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override
+            public void afterTextChanged(Editable s) {
+                getHash();
+            }}
+        );
     }
 
     public void clear(View view) {
@@ -67,8 +90,16 @@ public class MainActivity extends AppCompatActivity {
         b.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
     }
 
-    public void getHashView(View view) {
+    public void getHashSwitch(View view) {
         getHash();
+        SwitchMaterial switc = findViewById(R.id.switchOld);
+        if (switc.isChecked()) {
+            Slider slider = findViewById(R.id.slider);
+            slider.setEnabled(true);
+        } else {
+            Slider slider = findViewById(R.id.slider);
+            slider.setEnabled(false);
+        }
     }
 
     public void getHash() {

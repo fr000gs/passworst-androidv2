@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:checked="true"
-        android:onClick="getHashView"
+        android:onClick="getHashSwitch"
         android:text="@string/new_base64_password_secure"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,11 +100,11 @@
         <com.google.android.material.slider.Slider
             android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:contentDescription="@string/password_length_slider"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/password_length_slider"
             android:max="100"
             android:stepSize="1"
-            android:value="12"
+            android:value="18"
             android:valueFrom="1"
             android:valueTo="86" />
 
